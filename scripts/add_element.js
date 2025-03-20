@@ -26,7 +26,13 @@ function addElement() {
     },
   })
     .then((response) => response.json())
-    .then((data) => (window.location.href = "../elements.html"));
+    .then((data) => {
+      alert("El elemento se añadio exitosamente");
+      window.location.href = "../elements.html";
+    })
+    .catch((error) => {
+      alert("El proceso de añadir un elemento fallo");
+    });
 }
 
 const form = document.getElementById("form");
